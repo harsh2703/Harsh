@@ -1,0 +1,55 @@
+1. How to compile a java file?
+
+	In CMD: Open CMD > GoTo directory containing your java program > Type "javac yourcode.java and press Enter"
+
+	In Eclipse: GoTo Project Menu > UnCheck Build Automatically > Press Ctrl+B
+
+2. How to run a class file?
+	
+	In CMD: Open CMD > GoTo directory containing your class file > Type "java yourcode and press Enter"
+
+3. How to debug a java file?
+
+	A Java program can be debugged simply by right clicking on the Java editor class file from Package explorer. 
+	Select Debug As → Java Application or use the shortcut Alt + Shift + D, J instead.
+
+4. How to set classpath?
+
+	Press Windows button on your keyboard > search for "Edit the system environment variables" > Advanced >  Environment Variables
+
+	In the section System Variables, find the "PATH" environment variable and select it. Click Edit. If the "PATH" environment variable 
+	does not exist, click New.
+
+	In the Edit System Variable (or New System Variable) window, specify the value of the PATH environment variable. Click OK. 
+	Close all remaining windows by clicking OK.
+
+	PS: Path = Path of the bin folder of jdk. (D:\Program Files\Java\jdk1.8.0_271\bin)
+
+5. How to view current classpath?
+	
+	Open CMD > Type "echo %PATH%" or "echo %CLASSPATH%"
+	You will see the list of all the Paths added to your "PATH" or "CLASSPATH" variable respectively.
+
+6. How to set destination of the class file?
+
+	To set the destination of class file, we can use -d option with javac command.
+	eg. javac yourcode.java -d c:\myclasses
+
+7. How to run a compiled class file?
+
+	Open CMD > GoTo directory containing your class file > Type "java yourcode and press Enter"
+
+8. How to check version of java running on your system?
+	
+	Open CMD: type "java -version" and press enter
+
+9. How to set classpath when class files are in .jar file?
+
+	Open CMD
+	C:> set CLASSPATH=C:\dependency\framework.jar	
+	
+	//Add multiple jars
+	$ set CLASSPATH=C:\dependency\framework.jar;C:\location\otherFramework.jar  
+
+	//* means all the files with .jar extension
+	$ set CLASSPATH=C:\dependency\framework.jar;C:\location\*.jar
