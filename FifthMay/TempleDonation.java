@@ -6,7 +6,7 @@ public class TempleDonation {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		float amount = 0, amt=2;
+		double amount = 0;
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter number of temples visited: ");
@@ -15,11 +15,8 @@ public class TempleDonation {
 		int don = sc.nextInt();
 		sc.close();
 		
-		for(int i=1; i<=temple; i++) {
-			amount = (amount*2) + don;
-			amt *= 2;
-		}
-		float final_initial_amount = amount/(amt/2);
-		System.out.println("The Intial Amount Is: "+final_initial_amount);
+		double rem = Math.pow(2, temple);
+		amount = (((rem-1)*don)/rem);
+		System.out.println("The Intial Amount Is: "+amount);
 	}
 }
