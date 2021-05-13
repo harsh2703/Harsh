@@ -1,9 +1,11 @@
 package com.c2.training;
 
+import java.util.Scanner;
+
 public class PossibleBSTree {
 	public static class Node {
 		int data;
-		Node left , right;
+		Node left, right;
 		
 		Node(int data){
 			this.data = data;
@@ -37,7 +39,11 @@ public class PossibleBSTree {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		PossibleBSTree bst = new PossibleBSTree();
-		System.out.println("Total number of possible Binary Search Trees with given key: " + bst.numOfBST(4));
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter key: ");
+		int k = sc.nextInt();
+		sc.close();
+		System.out.println("Total number of possible Binary Search Trees with given key: " + bst.numOfBST(k));
 	}
 
 }
