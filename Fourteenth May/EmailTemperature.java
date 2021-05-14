@@ -14,7 +14,7 @@ public class EmailTemperature {
 		// TODO Auto-generated method stub
 		try {
 
-	        URL url = new URL("http://api.weatherstack.com/current?access_key=ec8267c71393e51822225bf04db46e65&query=New%20York&units=m");
+	        URL url = new URL("http://api.weatherstack.com/current?access_key="your_key_here"&query=New%20York&units=m");
 	        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 	        conn.setRequestMethod("GET");
 	        conn.setRequestProperty("Accept", "application/json");
@@ -29,10 +29,10 @@ public class EmailTemperature {
 	            System.out.println(output);
 	        }
 	        String host="smtp.gmail.com";  
-			  final String user="harsh.shah.c2@gmail.com";//change accordingly  
-			  final String password="ueEGeMGmQ4hW";//change accordingly  
+			  final String user="abc@xyz.com";//change accordingly  
+			  final String password="**********";//change accordingly  
 			    
-			  String to="harsh.shah@contcentric.com";//change accordingly  
+			  String to="xyz@hbs.com";//change accordingly  
 			  
 			   //Get the session object  
 			   Properties props = new Properties();  
