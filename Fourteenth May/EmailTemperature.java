@@ -20,24 +20,15 @@ public class EmailTemperature extends TimerTask {
 			Timer t = new Timer();
 			t.schedule(new EmailTemperature(), 0, 9000);
 
-<<<<<<< HEAD
 			URL url = new URL("http://api.weatherstack.com/current?access_key=ec8267c71393e51822225bf04db46e65&query=New%20York&units=m");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Accept", "application/json");
 				
-=======
-	        URL url = new URL("http://api.weatherstack.com/current?access_key="your_key_here"&query=New%20York&units=m");
-	        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-	        conn.setRequestMethod("GET");
-	        conn.setRequestProperty("Accept", "application/json");
-
->>>>>>> 0ce32566bf2837d36dc179100eebd99ad0a26193
 	        
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					(conn.getInputStream())));
 
-<<<<<<< HEAD
 			String res = br.readLine();
 			   JSONObject obj1 = new JSONObject(res);
 			String host="SMTP HOST"; //change accordingly 
@@ -59,32 +50,6 @@ public class EmailTemperature extends TimerTask {
 					return new PasswordAuthentication(user,password);  
 				}  
 			});
-=======
-	        String output;
-	        System.out.println("Output from Server .... \n");
-	        while ((output = br.readLine()) != null) {
-	            System.out.println(output);
-	        }
-	        String host="smtp.gmail.com";  
-			  final String user="abc@xyz.com";//change accordingly  
-			  final String password="**********";//change accordingly  
-			    
-			  String to="xyz@hbs.com";//change accordingly  
-			  
-			   //Get the session object  
-			   Properties props = new Properties();  
-			   props.put("mail.smtp.auth", "true");  
-			   props.put("mail.smtp.starttls.enable", "true");
-			   props.put("mail.smtp.host",host);  
-			   props.put("mail.smtp.port", "2525");
-			     
-			   Session session = Session.getDefaultInstance(props,  
-			    new javax.mail.Authenticator() {  
-			      protected PasswordAuthentication getPasswordAuthentication() {  
-			    return new PasswordAuthentication(user,password);  
-			      }  
-			   });
->>>>>>> 0ce32566bf2837d36dc179100eebd99ad0a26193
 			   
 			try {  
 					MimeMessage message = new MimeMessage(session);  
